@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neon Paint Place Website
+
+Baltimore's premier immersive glow-in-the-dark art experience website.
+
+## About Neon Paint Place
+
+**Motto:** Crazy, Colorful, Connection
+
+Neon Paint Place is Baltimore's #1 Experience, offering vibrant mix of creativity, entertainment, and unforgettable moments. We specialize in:
+
+- Splatter Paint Experiences
+- Sip & Paint Glow Classes
+- Spin Art Experiences
+- VR Painting
+- Private Parties & Events
+- Corporate Team-Building
+- Youth Parties & Field Trips
+- And more!
+
+**Location:** 307 West Baltimore Street, Baltimore, MD 21201
+
+**Contact:**
+- Phone: +1 (667) 354-8923
+- Email: neonpaintplace@gmail.com
+- Website: www.neonpaintplace.com
+
+## Tech Stack
+
+- **Framework:** Next.js 16.0.3
+- **React:** 19.2.0
+- **Language:** TypeScript
+- **Styling:** CSS (with neon theme variables)
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+neon-paint-place/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx          # Homepage with hero, services, testimonials, FAQ
+│   │   ├── experiences/      # All experiences/services page
+│   │   ├── gallery/          # Photo gallery
+│   │   ├── contact/          # Contact form and info
+│   │   ├── layout.tsx        # Root layout
+│   │   └── globals.css       # Global styles and neon theme
+│   └── components/
+│       ├── Hero.js           # Hero section with announcement
+│       ├── Navbar.js         # Navigation
+│       ├── Footer.js         # Footer with contact & social links
+│       ├── ServiceCard.js    # Reusable service card
+│       └── Marquee.js        # Scrolling text marquee
+└── public/
+    └── images/               # All website images
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Vibrant neon color scheme (Pink, Blue, Green, Yellow)
+- 10+ experience offerings with pricing
+- Customer testimonials
+- Comprehensive FAQ section
+- Fully responsive design
+- Smooth animations and transitions
+- Baltimore downtown location info
+- Clear booking CTAs throughout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Color Theme
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Neon Pink:** #ff00ff
+- **Neon Green:** #39ff14
+- **Neon Blue:** #00ffff
+- **Neon Yellow:** #efff00
+- **Neon Purple:** #bc13fe
 
-## Deploy on Vercel
+## Build & Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To build for production:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+To start production server:
+
+```bash
+npm start
+```
+
+## Future Enhancements
+
+- [ ] Integrate Bókun booking system
+- [ ] Add online payment processing
+- [ ] Create merchandise shop
+- [ ] Add event calendar
+- [ ] Implement social media feed integration
+
+## License
+
+ 2025 Neon Paint Place. All rights reserved.
+
+Powered by Bókun
