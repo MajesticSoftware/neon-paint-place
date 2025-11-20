@@ -15,7 +15,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero-section">
       <div
         className="hero-bg"
         style={{ transform: `translateY(${offset * 0.5}px)` }}
