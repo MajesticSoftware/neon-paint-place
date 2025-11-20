@@ -110,6 +110,9 @@ export default function Experiences() {
             <style jsx>{`
         .page-content {
           padding: 4rem 1rem;
+          position: relative;
+          z-index: 1;
+          min-height: 100vh;
         }
 
         .page-title {
@@ -122,16 +125,20 @@ export default function Experiences() {
           display: flex;
           flex-direction: column;
           gap: 4rem;
+          position: relative;
+          z-index: 2;
         }
 
         .experience-item {
           display: flex;
           align-items: center;
           gap: 3rem;
-          background: #111;
+          background: rgba(17, 17, 17, 0.95);
           padding: 2rem;
           border-radius: 20px;
           border: 1px solid #333;
+          position: relative;
+          z-index: 3;
         }
 
         .experience-item.reverse {
@@ -141,7 +148,10 @@ export default function Experiences() {
         .exp-image {
           position: relative;
           width: 50%;
+          min-width: 50%;
           height: 300px;
+          min-height: 300px;
+          flex-shrink: 0;
           border-radius: 10px;
           overflow: hidden;
           box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -149,6 +159,7 @@ export default function Experiences() {
 
         .exp-info {
           width: 50%;
+          flex: 1;
         }
 
         .exp-info h2 {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StyledJsxRegistry from "@/lib/registry";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://neon-paint-place.vercel.app'),
@@ -87,9 +88,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <StyledJsxRegistry>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </StyledJsxRegistry>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
