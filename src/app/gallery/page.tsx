@@ -23,7 +23,15 @@ export default function Gallery() {
             <div className="gallery-grid">
                 {images.map((src, index) => (
                     <div key={index} className="gallery-item">
-                        <Image src={src} alt={`Gallery image ${index + 1}`} fill style={{ objectFit: 'cover' }} />
+                        <Image 
+                            src={src} 
+                            alt={`Gallery image ${index + 1}`} 
+                            fill 
+                            style={{ objectFit: 'cover' }}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            priority={index < 3}
+                            loading={index < 3 ? undefined : 'lazy'}
+                        />
                     </div>
                 ))}
             </div>

@@ -190,7 +190,16 @@ export default function Home() {
         <div className="gallery-grid">
           {galleryImages.map((img, idx) => (
             <div key={idx} className="gallery-item glass">
-              <Image src={img} alt="Gallery" fill style={{ objectFit: 'cover' }} className="gallery-img" />
+              <Image 
+                src={img} 
+                alt="Gallery" 
+                fill 
+                style={{ objectFit: 'cover' }} 
+                className="gallery-img"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={idx === 0}
+                loading={idx === 0 ? undefined : 'lazy'}
+              />
             </div>
           ))}
         </div>

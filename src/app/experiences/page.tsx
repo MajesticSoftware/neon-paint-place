@@ -84,7 +84,15 @@ export default function Experiences() {
                 {experiences.map((exp, index) => (
                     <div key={index} className={`experience-item ${index % 2 === 1 ? 'reverse' : ''}`}>
                         <div className="exp-image">
-                            <Image src={exp.image} alt={exp.title} fill style={{ objectFit: 'cover' }} />
+                            <Image 
+                                src={exp.image} 
+                                alt={exp.title} 
+                                fill 
+                                style={{ objectFit: 'cover' }}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority={index < 2}
+                                loading={index < 2 ? undefined : 'lazy'}
+                            />
                         </div>
                         <div className="exp-info">
                             <h2 className="text-neon-pink">{exp.title}</h2>
