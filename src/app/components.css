@@ -270,6 +270,20 @@
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+}
+
+.video-fallback {
+  padding: 2rem;
+  text-align: center;
+}
+
+.video-fallback .hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
 }
 
 .hero-title {

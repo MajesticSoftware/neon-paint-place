@@ -1,10 +1,13 @@
 "use client";
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function Hero() {
   const [offset, setOffset] = useState(0);
+  const [videoError, setVideoError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +15,16 @@ export default function Hero() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Ensure video plays on mount
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.error('Video autoplay failed:', err);
+        setVideoError(true);
+      });
+    }
   }, []);
 
   return (
@@ -26,17 +39,35 @@ export default function Hero() {
           🎉 NOW OPEN AT OUR NEW DOWNTOWN LOCATION! BOOK TODAY! 🎉
         </div>
         <div className="hero-video-container fade-in">
-          <video 
-            className="hero-video"
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            poster="/images/_MG_5643.JPG"
-          >
-            <source src="/copy_4CB4AC92-488E-4DE3-B111-DB9565F9D8A2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {!videoError ? (
+            <video 
+              ref={videoRef}
+              className="hero-video"
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              preload="auto"
+              poster="/images/_MG_5643.JPG"
+              onError={(e) => {
+                console.error('Video load error:', e);
+                setVideoError(true);
+              }}
+              onLoadedData={() => {
+                console.log('Video loaded successfully');
+                setVideoLoaded(true);
+              }}
+            >
+              <source src="/copy_4CB4AC92-488E-4DE3-B111-DB9565F9D8A2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <div className="video-fallback">
+              <h1 className="hero-title animate-glow">
+                <span className="text-neon-pink">Neon Paint Place</span>
+              </h1>
+            </div>
+          )}
         </div>
         <h2 className="hero-tagline fade-in">
           Crazy, Colorful, Connection
