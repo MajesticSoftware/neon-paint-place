@@ -25,9 +25,19 @@ export default function Hero() {
         <div className="announcement-banner fade-in">
           🎉 NOW OPEN AT OUR NEW DOWNTOWN LOCATION! BOOK TODAY! 🎉
         </div>
-        <h1 className="hero-title animate-glow">
-          <span className="text-neon-pink">Neon Paint Place</span>
-        </h1>
+        <div className="hero-video-container fade-in">
+          <video 
+            className="hero-video"
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            poster="/images/_MG_5643.JPG"
+          >
+            <source src="/copy_4CB4AC92-488E-4DE3-B111-DB9565F9D8A2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <h2 className="hero-tagline fade-in">
           Crazy, Colorful, Connection
         </h2>

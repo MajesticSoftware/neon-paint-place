@@ -257,6 +257,21 @@
   50% { box-shadow: 0 0 50px rgba(255, 0, 255, 0.9); }
 }
 
+.hero-video-container {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.5);
+  animation: glow 3s infinite;
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero-title {
   font-size: 5rem;
   font-weight: 900;
@@ -289,6 +304,10 @@
   .announcement-banner {
     font-size: 0.8rem;
     padding: 0.8rem 1.5rem;
+  }
+  .hero-video-container {
+    max-width: 95%;
+    margin: 0 auto 1.5rem;
   }
   .hero-title {
     font-size: 3rem;
