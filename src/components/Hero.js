@@ -58,7 +58,7 @@ export default function Hero() {
                 setVideoLoaded(true);
               }}
             >
-              <source src="/copy_4CB4AC92-488E-4DE3-B111-DB9565F9D8A2.mp4" type="video/mp4" />
+              <source src="/hero-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           ) : (
