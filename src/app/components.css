@@ -1,4 +1,200 @@
 /* ========================================
+   PROMO BANNER STYLES
+   ======================================== */
+.promo-banner {
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));
+  color: white;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+  animation: pulse 2s infinite;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.promo-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.promo-link {
+  background: white;
+  color: var(--neon-pink);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+}
+
+.promo-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.promo-close {
+  position: absolute;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.promo-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .promo-banner {
+    padding: 0.8rem 3rem 0.8rem 1rem;
+  }
+  .promo-text {
+    font-size: 0.8rem;
+  }
+  .promo-link {
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+/* ========================================
+   NEWSLETTER STYLES
+   ======================================== */
+.newsletter-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+  position: relative;
+}
+
+.newsletter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.newsletter-header {
+  margin-bottom: 3rem;
+}
+
+.newsletter-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.newsletter-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--neon-blue);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.newsletter-input:focus {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.newsletter-input::placeholder {
+  color: #888;
+}
+
+.newsletter-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.newsletter-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.newsletter-message.success {
+  background: rgba(57, 255, 20, 0.1);
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+}
+
+.newsletter-message.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+.newsletter-note {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .newsletter-title {
+    font-size: 2rem;
+  }
+  .newsletter-subtitle {
+    font-size: 1rem;
+  }
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+  .newsletter-btn {
+    width: 100%;
+  }
+  .newsletter-content {
+    padding: 3rem 2rem;
+  }
+}
+
+/* ========================================
    HERO COMPONENT STYLES
    ======================================== */
 .hero-section {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -16,8 +17,15 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link href="/" className="nav-logo">
-        NEON PAINT PLACE
+      <Link href="/" className="nav-logo-container">
+        <Image 
+          src="/images/For booking withus.png"
+          alt="Neon Paint Place"
+          width={180}
+          height={80}
+          className="nav-logo-image"
+          priority
+        />
       </Link>
       
       <button 

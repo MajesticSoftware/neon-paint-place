@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import Marquee from '@/components/Marquee';
+import Newsletter from '@/components/Newsletter';
 import Image from 'next/image';
 
 export default function Home() {
@@ -202,6 +203,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <Newsletter />
     </main>
   );
 }

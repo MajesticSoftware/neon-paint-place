@@ -186,6 +186,22 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo-image {
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.nav-logo-image:hover {
+  transform: scale(1.05);
+}
+
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 900;
