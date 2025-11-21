@@ -29,46 +29,26 @@ export default function Hero() {
 
   return (
     <section className="hero-section">
-      <div
-        className="hero-bg"
-        style={{ transform: `translateY(${offset * 0.5}px)` }}
-      ></div>
+      <div className="hero-video-bg">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="hero-video-fullscreen"
+          poster="/images/_MG_5643.JPG"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      
       <div className="hero-overlay"></div>
+      
       <div className="hero-content container">
         <div className="announcement-banner fade-in">
           🎉 NOW OPEN AT OUR NEW DOWNTOWN LOCATION! BOOK TODAY! 🎉
         </div>
-        <div className="hero-video-container fade-in">
-          {!videoError ? (
-            <video 
-              ref={videoRef}
-              className="hero-video"
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              preload="auto"
-              poster="/images/_MG_5643.JPG"
-              onError={(e) => {
-                console.error('Video load error:', e);
-                setVideoError(true);
-              }}
-              onLoadedData={() => {
-                console.log('Video loaded successfully');
-                setVideoLoaded(true);
-              }}
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <div className="video-fallback">
-              <h1 className="hero-title animate-glow">
-                <span className="text-neon-pink">Neon Paint Place</span>
-              </h1>
-            </div>
-          )}
-        </div>
+        
         <h2 className="hero-tagline fade-in">
           Crazy, Colorful, Connection
         </h2>
